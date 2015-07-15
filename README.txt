@@ -15,7 +15,9 @@ def gen(x, mod, zahlen, ordnung, pListe):
 def bestimmeUntergruppe():
 	mod = int(input("Welche Gruppe?: "))
 	ordnungWahl = mod-1
-	ordnung = int(input("Welche Ordnung? Waehle zwischen 2 und %s: " %ordnungWahl))
+       	ordnung = mod+1
+       	while ordnung>ordnungWahl or ordnung <2:
+		ordnung = int(input("Welche Ordnung? Waehle zwischen 2 und %s: " %ordnungWahl))
 	pListe = input("Liste(w) oder Rang(f): ")
 	for i in range(mod):
 		zahlen = []
